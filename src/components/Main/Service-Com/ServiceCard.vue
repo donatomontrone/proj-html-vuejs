@@ -35,7 +35,7 @@
 </template>
 <script>
 export default {
-    name: 'ServiceCardComponent',
+    name: 'ServiceCard',
     data() {
         return {
             cards: [

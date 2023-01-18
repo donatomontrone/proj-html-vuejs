@@ -1,5 +1,5 @@
 <template>
-    <section id="choose-up">
+    <section id="choose-us">
         <div class="d-flex">
             <div class="choose-img">
                 <p>immagine</p>

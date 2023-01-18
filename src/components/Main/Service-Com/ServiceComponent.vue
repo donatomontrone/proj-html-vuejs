@@ -7,17 +7,17 @@
                 <p>Service</p>
                 <h2>titolo</h2>
                 <!-- Effettuare un vfor per ogni card -->
-                <ServiceCardComponent />
+                <ServiceCard />
             </div>
         </div>
     </section>
 </template>
 <script>
-import ServiceCardComponent from './ServiceCardComponent.vue'
+import ServiceCard from './ServiceCard.vue'
 export default {
     name: 'ServiceComponent',
     components: {
-        ServiceCardComponent,
+        ServiceCard,
     },
     data() {
         return {
