@@ -7,8 +7,7 @@
                 <h1>Welcome to dogmilo pets</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti quidem eum ducimus.</p>
                 <div class="btn-container">
-                    <!-- Bottone tag a (classe condivisa get-button) -->
-                    <p>item</p>
+                    <ButtonComponent />
                     <!-- icona a cui dare uno sfondo con un colore non presente nella palette -->
                     <span>icona</span>
                 </div>
@@ -17,8 +16,12 @@
     </section>
 </template>
 <script>
+import ButtonComponent from '../ButtonComponent.vue';
 export default {
-
+    name: 'JumbotronComponent',
+    components: {
+        ButtonComponent,
+    }
 }
 </script>
 <style lang="scss" scoped>

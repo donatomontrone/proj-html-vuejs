@@ -38,8 +38,9 @@
                         <li>Item</li>
                         <li>Item</li>
                         <li>Item</li>
-                        <!-- Bottone tag a (classe condivisa get-button)-->
-                        <li>Item</li>
+                        <li>
+                            <ButtonComponent />
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -47,8 +48,12 @@
     </header>
 </template>
 <script>
+import ButtonComponent from './ButtonComponent.vue';
 export default {
     name: 'HeaderComoponent',
+    components: {
+        ButtonComponent,
+    },
     data() {
         return {
 
