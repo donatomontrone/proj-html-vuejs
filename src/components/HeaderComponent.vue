@@ -27,7 +27,7 @@
                 </div>
             </div>
         </section>
-        <nav>
+        <nav class="h-navbar">
             <div class="wrapper">
                 <div class="d-flex justify-content-between">
                     <a href="#">Logo</a>
@@ -38,7 +38,7 @@
                         <li>Item</li>
                         <li>Item</li>
                         <li>Item</li>
-                        <!-- Bottone -->
+                        <!-- Bottone tag a (classe condivisa get-button)-->
                         <li>Item</li>
                     </ul>
                 </div>
@@ -48,6 +48,12 @@
 </template>
 <script>
 export default {
+    name: 'HeaderComoponent',
+    data() {
+        return {
+
+        }
+    },
 
 }
 </script>
@@ -56,6 +62,10 @@ export default {
 
 header {
     width: 100%;
+
+    .contact-info {
+        background-color: grey;
+    }
 }
 
 ul li {
