@@ -1,5 +1,6 @@
 <template>
     <!-- Inserire lo sfondo del jumbotron (b.png) -->
+    <!-- In un secondo momento cercare di fare uno slider -->
     <section id="jumbotron">
         <div class="wrapper">
             <!-- Dare una witdh che vada quasi al centro della pagina -->
