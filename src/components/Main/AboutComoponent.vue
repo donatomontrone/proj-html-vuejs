@@ -8,7 +8,7 @@
                 </div>
                 <div class="about-text">
                     <span>icon</span>
-                    <!-- Colore preso dalla palette -->
+                    <!-- Mini title della section -Colore preso dalla palette -->
                     <span>about us</span>
                     <h2>Titolo</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, minus!</p>

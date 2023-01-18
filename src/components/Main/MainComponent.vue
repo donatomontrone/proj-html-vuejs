@@ -3,16 +3,19 @@
     <main>
         <JumbotronComponent />
         <AboutComoponent />
+        <ServiceComponent />
     </main>
 </template>
 <script>
 import JumbotronComponent from './JumbotronComponent.vue';
 import AboutComoponent from './AboutComoponent.vue';
+import ServiceComponent from './ServiceComponent.vue';
 export default {
     name: 'MainComponent',
     components: {
         JumbotronComponent,
         AboutComoponent,
+        ServiceComponent,
     }
 }
 </script>
