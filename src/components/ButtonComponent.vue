@@ -26,5 +26,9 @@ button {
     font-weight: 500;
     padding: 10px 25px;
     background-color: $main-brand-color;
+
+    &:hover {
+        background-color: $hover-btn-color;
+    }
 }
 </style>
