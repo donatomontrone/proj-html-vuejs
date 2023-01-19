@@ -3,16 +3,18 @@
         <ul>
             <!-- Effettuo un v-for per inseirli nello script (Inserire il path dei social) -->
             <li v-for="social in socials">
-                <img :src="getImagePath(`img/social/${social.path}`)" :alt="social.name">
+                <img :src="store.getImagePath(`img/social/${social.path}`)" :alt="social.name">
             </li>
         </ul>
     </div>
 </template>
 <script>
+import { store } from '../store.js';
 export default {
     name: 'SocialComponent',
     data() {
         return {
+            store,
             socials: [
                 {
                     name: 'Facebook',

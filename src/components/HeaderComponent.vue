@@ -2,7 +2,7 @@
     <header>
         <section class="contact-info">
             <div class="wrapper">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between mx-2">
                     <div class="contacts d-flex">
                         <!-- Piccolo margine a sinistra rispetto al logo -->
                         <div class="email-contact d-flex">
@@ -21,7 +21,7 @@
         <nav>
             <div class="wrapper">
                 <div class="d-flex justify-content-between h-100">
-                    <a href="#"><img :src="getImagePath('/img/logo.png')" alt="DogMilo main logo"></a>
+                    <a href="#"><img :src="store.getImagePath('img/logo.png')" alt="DogMilo main logo"></a>
                     <!-- Effettuo un v-for per inserirli dallo script -->
                     <ul>
                         <li v-for="item in navList"><a :class="(item.active) ? 'active' : ''" href="#">{{
@@ -72,11 +72,6 @@ export default {
                 },
             ]
         }
-    },
-    methods: {
-        getImagePath: function (img) {
-            return new URL((`../assets/${img}`), import.meta.url).href;
-        },
     },
 }
 </script>

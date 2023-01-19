@@ -3,7 +3,6 @@
     <button href="#">{{ headerButton }}</button>
 </template>
 <script>
-import { store } from '../store.js';
 export default {
     name: 'ButtonComponent',
     props: [
