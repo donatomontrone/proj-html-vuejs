@@ -31,6 +31,17 @@ span.minititle {
     padding-left: .5rem;
 }
 
+
+article {
+    width: calc((100% / 3) - 1.5rem);
+    margin-left: 1.5rem;
+}
+
+.star {
+    color: $icon-color;
+    font-size: .65rem;
+}
+
 ul {
     margin-bottom: 0;
 
