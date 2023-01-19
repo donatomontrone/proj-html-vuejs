@@ -19,6 +19,18 @@ body {
     font-family: 'Jost', sans-serif;
 }
 
+h2 {
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+}
+
+span.minititle {
+    color: $secondary-brand-color;
+    font-weight: 500;
+    font-size: .7rem;
+    padding-left: .5rem;
+}
+
 ul {
     margin-bottom: 0;
 
