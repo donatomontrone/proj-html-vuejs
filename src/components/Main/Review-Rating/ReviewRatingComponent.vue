@@ -62,6 +62,7 @@ export default {
 
 section#review-rating {
     padding: 4rem 0;
+    margin-bottom: 6rem;
 
     img.paw-icon {
         width: 16px;
@@ -83,6 +84,10 @@ section#review-rating {
         display: inline-block;
 
         margin: .7rem 0 0 .7rem;
+
+        &:hover {
+            background-color: $secondary-brand-color;
+        }
 
         img {
             width: 20px;

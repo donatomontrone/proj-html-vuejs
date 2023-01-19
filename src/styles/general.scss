@@ -1,13 +1,6 @@
 @use './partials/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 div.wrapper {
     width: 60%;
@@ -29,6 +22,19 @@ span.minititle {
     font-weight: 500;
     font-size: .7rem;
     padding-left: .5rem;
+}
+
+p {
+    color: $dark-text-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+//font-awesome icon
+svg {
+    color: $main-brand-color;
 }
 
 

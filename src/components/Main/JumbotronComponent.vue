@@ -53,6 +53,10 @@ div.jumbo-start {
         margin-bottom: 1rem;
     }
 
+    p {
+        color: $primary-light-color;
+    }
+
     div.play-bg {
         height: 45px;
         width: 45px;

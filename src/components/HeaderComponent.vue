@@ -104,10 +104,7 @@ header {
                 font-size: .8rem;
             }
 
-            //font-awesome icon
-            svg {
-                color: $main-brand-color;
-            }
+
 
         }
     }
@@ -135,8 +132,7 @@ header {
 
 
                 a {
-                    text-decoration: none;
-                    color: $dark-text-color;
+                    color: $secondary-text-color;
 
                     &.active,
                     &:hover {
