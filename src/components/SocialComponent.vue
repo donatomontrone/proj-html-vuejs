@@ -2,22 +2,66 @@
     <div class="social">
         <ul>
             <!-- Effettuo un v-for per inseirli nello script (Inserire il path dei social) -->
-            <li>F</li>
-            <li>P</li>
-            <li>T</li>
-            <li>L</li>
-            <li>I</li>
+            <li v-for="social in socials">
+                <img :src="getImagePath(`img/social/${social.path}`)" :alt="social.name">
+            </li>
         </ul>
     </div>
 </template>
 <script>
 export default {
-    name: 'SocialComponent'
+    name: 'SocialComponent',
+    data() {
+        return {
+            socials: [
+                {
+                    name: 'Facebook',
+                    path: 'facebook.png'
+
+                },
+                {
+                    name: 'Pinterest',
+                    path: 'pinterest.png'
+
+                },
+                {
+                    name: 'Twitter',
+                    path: 'twitter.png'
+
+                },
+                {
+                    name: 'Linkedin',
+                    path: 'linkedin.png'
+
+                },
+                {
+                    name: 'Instagram',
+                    path: 'instagram.png'
+
+                },
+            ]
+        }
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL((`../assets/${img}`), import.meta.url).href;
+        },
+    },
 }
 </script>
 <style lang="scss" scoped>
-ul li {
+ul {
     list-style: none;
-    display: inline-block;
+    margin-bottom: 0;
+
+    li {
+        display: inline-block;
+    }
+
+    img {
+        width: 17px;
+        border-radius: 10%;
+        margin-right: 5px;
+    }
 }
 </style>

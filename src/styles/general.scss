@@ -18,3 +18,11 @@ div.wrapper {
 body {
     font-family: 'Jost', sans-serif;
 }
+
+ul {
+    margin-bottom: 0;
+
+    li {
+        list-style: none;
+    }
+}
