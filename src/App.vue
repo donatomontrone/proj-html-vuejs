@@ -1,14 +1,12 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/Main/MainComponent.vue';
-import OverlayComponent from './components/OverlayComponent.vue'
 import FooterComponent from './components/FooterComponent.vue';
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     MainComponent,
-    OverlayComponent,
     FooterComponent
   }
 }
@@ -17,7 +15,6 @@ export default {
 <template>
   <HeaderComponent />
   <MainComponent />
-  <OverlayComponent />
   <FooterComponent />
 </template>
 

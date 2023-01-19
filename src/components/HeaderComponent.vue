@@ -14,16 +14,7 @@
                             <p>telefono </p>
                         </div>
                     </div>
-                    <div class="social">
-                        <ul>
-                            <!-- Efffettuo un v-for per inseirli nello script (Inserire il path dei social) -->
-                            <li>F</li>
-                            <li>P</li>
-                            <li>T</li>
-                            <li>L</li>
-                            <li>I</li>
-                        </ul>
-                    </div>
+                    <SocialComponent />
                 </div>
             </div>
         </section>
@@ -49,10 +40,12 @@
 </template>
 <script>
 import ButtonComponent from './ButtonComponent.vue';
+import SocialComponent from './SocialComponent.vue';
 export default {
     name: 'HeaderComoponent',
     components: {
         ButtonComponent,
+        SocialComponent,
     },
     data() {
         return {
@@ -71,10 +64,5 @@ header {
     .contact-info {
         background-color: grey;
     }
-}
-
-ul li {
-    list-style: none;
-    display: inline-block;
 }
 </style>

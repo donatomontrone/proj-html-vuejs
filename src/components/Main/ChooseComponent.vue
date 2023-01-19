@@ -9,7 +9,7 @@
                 <!-- Mini title della section -Colore preso dalla palette -->
                 <span>about us</span>
                 <h2>Titolo</h2>
-                <!-- Provare un v-for ma capire come gestire la diversa witdh -->
+                <!-- Effettuare un v-for e nei data inserire nell'aggetto una key per gestire la witdh -->
                 <article>
                     <img src="s" alt="immagine">
                     <h3>titolo</h3>
