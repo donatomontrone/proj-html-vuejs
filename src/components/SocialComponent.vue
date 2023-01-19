@@ -44,11 +44,6 @@ export default {
             ]
         }
     },
-    methods: {
-        getImagePath: function (img) {
-            return new URL((`../assets/${img}`), import.meta.url).href;
-        },
-    },
 }
 </script>
 <style lang="scss" scoped>

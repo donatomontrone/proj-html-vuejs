@@ -1,6 +1,6 @@
 <template>
     <!-- Stilizzare il button per inserirlo nell'header nav e nel jumbotron -->
-    <button href="#">{{ headerButton }}</button>
+    <button href="#" class="">{{ headerButton }}</button>
 </template>
 <script>
 export default {
@@ -23,8 +23,8 @@ button {
     text-decoration: none;
     border-radius: 50px;
     border: 0;
-    font-weight: 400;
-    padding: 10px 20px;
+    font-weight: 500;
+    padding: 10px 25px;
     background-color: $main-brand-color;
 }
 </style>
