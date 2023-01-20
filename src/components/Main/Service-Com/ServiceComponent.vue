@@ -3,15 +3,15 @@
     <section id="service">
         <div class="bg-left">
             <div class="bg-right">
-                <div class="wrapper">
-                    <div class="d-flex flex-column align-items-center">
-                        <!-- Mini title della section - colore preso dalla palette -->
-                        <span class="minititle"> Service </span>
-                        <h2 class="text-center">DogMilo Pet Care Services For Your Best Friends.</h2>
-                        <!-- Effettuare un vfor per ogni card -->
-                    </div>
-                    <div class="card-container d-flex justify-content-around">
-                        <ServiceCard v-for="serviceCard in services" :serviceCardInfo="serviceCard" />
+                <div class="d-flex flex-column align-items-center">
+                    <!-- Mini title della section - colore preso dalla palette -->
+                    <span class="minititle"> Service </span>
+                    <h3 class="text-center">DogMilo Pet Care Services <br>For Your Best Friends.</h3>
+                    <!-- Effettuare un vfor per ogni card -->
+                    <div class="container">
+                        <div class="row">
+                            <ServiceCard v-for="serviceCard in services" :serviceCardInfo="serviceCard" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,13 +84,16 @@ section#service {
         background-size: 190px;
     }
 
-    h2 {
-        width: 320px;
-        font-size: 1.5rem;
+    span {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
     }
 
-    span {
-        font-size: .8rem;
+    h3 {
+        font-size: 2rem;
     }
+
+
+
 }
 </style>

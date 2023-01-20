@@ -1,11 +1,13 @@
 <!--effettuare un v-for al parent -->
 <template>
-    <div class="card-info d-flex flex-column align-items-center">
-        <img class="path" :src="store.getImagePath('img/' + serviceCardInfo.path)" :alt="serviceCardInfo.title">
-        <h6 class="text-center">{{ serviceCardInfo.title }}</h6>
-        <p class="text-center">{{ serviceCardInfo.text }}</p>
-        <div class="icon d-flex justify-content-center">
-            <img :src="store.getImagePath('img/' + serviceCardInfo.icon)" alt="button">
+    <div class="card-container p-4">
+        <div class="card-info d-flex flex-column justify-content-center align-items-center">
+            <img class="path" :src="store.getImagePath('img/' + serviceCardInfo.path)" :alt="serviceCardInfo.title">
+            <h6 class="text-center">{{ serviceCardInfo.title }}</h6>
+            <p class="text-center">{{ serviceCardInfo.text }}</p>
+            <div class="icon d-flex justify-content-center">
+                <img :src="store.getImagePath('img/' + serviceCardInfo.icon)" alt="button">
+            </div>
         </div>
     </div>
 </template>
@@ -26,28 +28,31 @@ export default {
 <style lang="scss" scoped>
 @use '../../../styles/partials/variables.scss' as *;
 
+div.card-container {
+    width: 20%;
+}
+
 div.card-info {
     background-color: $main-brand-color;
-    width: 140px;
     border-radius: 100px;
-    padding: 1rem;
     color: $secondary-light-color;
+
+    padding: 1rem;
 
     &:hover {
         background-color: $secondary-brand-color;
     }
 
     h6 {
-        font-size: .85rem;
+        font-size: 1.15rem;
     }
 
     p {
-        font-size: .7rem;
-        margin-bottom: 1.2rem;
+        color: $secondary-light-color;
     }
 
     img.path {
-        width: 50px;
+        width: 70px;
         margin-bottom: .8rem;
     }
 
