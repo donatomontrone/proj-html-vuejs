@@ -13,11 +13,12 @@
                     <!-- fare un vfor per le stelle -->
                     <font-awesome-icon icon="fa-solid fa-star" v-for="n in 5" class="star" />
                 </article>
-                <ReviewRatingCard v-for="review in reviews" :reviewInfo="review" />
+                <ReviewRatingCard :reviewInfo="reviews" :activeIndex="currentActive" />
             </div>
             <div class="slider-buttons text-end">
-                <a href="#!"> <img :src="store.getImagePath('img/left-arrow.png')" alt="left arrow"> </a>
-                <a href="#!"><img :src="store.getImagePath('img/next.png')" alt="right arrow"></a>
+                <a href="#!"> <img :src="store.getImagePath('img/left-arrow.png')" alt="left arrow"
+                        @click="prevSlide()"> </a>
+                <a href="#!"><img :src="store.getImagePath('img/next.png')" alt="right arrow" @click="nextSlide()"></a>
             </div>
         </div>
     </section>
@@ -44,15 +45,45 @@ export default {
                 },
                 {
                     vote: 5,
-                    title: 'Great Place',
+                    title: 'Great Place1111',
                     text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when',
                     reviewerPath: 't1.png',
                     reviewerName: 'Tobias May',
                     employment: 'UI/UX Designer'
                 },
-
-            ]
+                {
+                    vote: 5,
+                    title: 'Great Place122',
+                    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when',
+                    reviewerPath: 't1.png',
+                    reviewerName: 'Tobias May',
+                    employment: 'UI/UX Designer'
+                },
+                {
+                    vote: 5,
+                    title: 'Great Place1333',
+                    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when',
+                    reviewerPath: 't1.png',
+                    reviewerName: 'Tobias May',
+                    employment: 'UI/UX Designer'
+                },
+            ],
+            currentActive: 0,
         }
+    },
+    methods: {
+        nextSlide() {
+            this.currentActive++;
+            if ((this.currentActive + 1) === this.slides.length) {
+                this.currentActive = 0;
+            }
+        },
+        prevSlide() {
+            this.currentActive--;
+            if (this.currentActive < 0) {
+                this.currentActive = this.slides.length - 1
+            }
+        },
     },
 
 }

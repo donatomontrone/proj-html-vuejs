@@ -92,6 +92,7 @@ footer {
 
     svg {
         font-size: .75rem;
+        padding-right: .2rem;
     }
 
 

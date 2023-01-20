@@ -96,6 +96,7 @@ export default {
     color: $primary-light-color;
     position: relative;
 
+
     img.jumbo-img {
         height: 100%;
         width: 100%;
