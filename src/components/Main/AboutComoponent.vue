@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="about-img text-center">
+                    <div class="about-img">
                         <img :src="store.getImagePath('img/about.png')" alt="Woman with two dogs" class="img-fluid">
                     </div>
                 </div>

@@ -1,24 +1,30 @@
 <template>
     <section id="choose-us">
-        <div class="d-flex">
-            <div class="choose-img">
-                <img :src="store.getImagePath('img/why.png')" alt="woman with a dog">
-            </div>
-            <div class="choose-text">
-                <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
-                <!-- Mini title della section -Colore preso dalla palette -->
-                <span class="minititle">Choose Us</span>
-                <h2>Why Choose Us?</h2>
-                <!-- Effettuare un v-for e nei data inserire nell'aggetto una key per gestire la witdh -->
-                <article v-for="(article, index) in chooseList" :class="applyWidth(index)" class="d-flex ">
-                    <div class="img-container">
-                        <img :src="store.getImagePath(`img/${article.path}`)" alt="immagine">
+        <div class="container-fluid g-0">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="choose-img">
+                        <img :src="store.getImagePath('img/why.png')" alt="woman with a dog">
                     </div>
-                    <div class="text-container">
-                        <h3>{{ article.title }}</h3>
-                        <p>{{ article.text }}</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="choose-text">
+                        <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
+                        <!-- Mini title della section -Colore preso dalla palette -->
+                        <span class="minititle">Choose Us</span>
+                        <h2>Why Choose Us?</h2>
+                        <!-- Effettuare un v-for e nei data inserire nell'aggetto una key per gestire la witdh -->
+                        <article v-for="(article, index) in chooseList" :class="applyWidth(index)" class="d-flex ">
+                            <div class="img-container">
+                                <img :src="store.getImagePath(`img/${article.path}`)" alt="immagine">
+                            </div>
+                            <div class="text-container">
+                                <h4>{{ article.title }}</h4>
+                                <p>{{ article.text }}</p>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -65,13 +71,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-div.choose-img,
-div.choose-text {
-    width: 50%;
-}
-
 div.choose-img img {
-    width: 97%;
+    width: 100%;
 }
 
 div.choose-text {
@@ -90,13 +91,8 @@ div.choose-text {
         margin-right: 1.2rem;
     }
 
-    div.text-container {
-        font-size: .85rem;
-
-        h3 {
-            font-size: 1.1rem;
-            padding-bottom: .2rem;
-        }
+    div.text-container p {
+        font-size: 1.15rem;
     }
 
 }

@@ -8,7 +8,7 @@
                     <span class="minititle"> Service </span>
                     <h3 class="text-center">DogMilo Pet Care Services <br>For Your Best Friends.</h3>
                     <!-- Effettuare un vfor per ogni card -->
-                    <div class="container">
+                    <div class="container g-5">
                         <div class="row">
                             <ServiceCard v-for="serviceCard in services" :serviceCardInfo="serviceCard" />
                         </div>
