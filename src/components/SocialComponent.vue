@@ -57,9 +57,9 @@ ul {
     }
 
     img {
-        width: 17px;
+        width: 22px;
         border-radius: 10%;
-        margin-right: 5px;
+        margin-right: 7px;
     }
 }
 </style>
