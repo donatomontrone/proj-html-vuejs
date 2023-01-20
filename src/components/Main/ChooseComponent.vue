@@ -2,19 +2,19 @@
     <section id="choose-us" class="mb-5 pb-5">
         <div class="container-fluid g-0">
             <div class="row">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-md-6">
                     <div class="choose-img">
                         <img :src="store.getImagePath('img/why.png')" alt="woman with a dog">
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-md-6">
                     <div class="choose-text">
                         <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
                         <!-- Mini title della section -Colore preso dalla palette -->
                         <span class="minititle">Choose Us</span>
                         <h2>Why Choose Us?</h2>
                         <!-- Effettuare un v-for e nei data inserire nell'aggetto una key per gestire la witdh -->
-                        <article v-for="(article, index) in chooseList" :class="applyWidth(index)" class="d-flex ">
+                        <article v-for="(article, index) in chooseList" :class="applyMargin(index)" class="d-flex ">
                             <div class="img-container">
                                 <img :src="store.getImagePath(`img/${article.path}`)" alt="immagine">
                             </div>
@@ -56,15 +56,9 @@ export default {
         }
     },
     methods: {
-        applyWidth(i) {
-            if (i == 0) {
-                return 'w-100 ms-auto'
-            }
+        applyMargin(i) {
             if (i == 1) {
-                return 'w-75 ms-auto'
-            }
-            if (i == 2) {
-                return 'w-50 ms-auto'
+                return 'ms-0 ms-md-5'
             }
         }
     },
@@ -86,8 +80,16 @@ div.choose-text {
         margin: 1rem 0;
     }
 
+    article {
+        padding: .8rem 0;
+
+        h4 {
+            padding-bottom: 1rem;
+        }
+    }
+
     div.img-container img {
-        width: 120px;
+        width: 70%;
         margin-right: 1.2rem;
     }
 
