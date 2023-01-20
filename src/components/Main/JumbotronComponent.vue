@@ -28,7 +28,7 @@
                             <p>{{ slides[currentActive].text }}</p>
                             <div class="btn-container d-flex">
                                 <ButtonComponent :headerButton="store.buttons[1]" />
-                                <div class="play-bg">
+                                <div class="play-bg" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <img :src="store.getImagePath('img/' + slides[currentActive].buttonPath)"
                                         alt="Play Icon">
                                 </div>
@@ -44,6 +44,31 @@
             </div>
         </div>
     </section>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Video</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-relative">
+                    <img :src="store.getImagePath('img/sddefault.jpg')" alt="CoComelon video cover" class="img-fluid">
+                    <img :src="store.getImagePath('img/image (8).svg')" alt="YouTube Logo" class="play-button">
+                    <div class="title-video">
+                        <img :src="store.getImagePath('img/unnamed.jpg')" alt="CoComelo Logo"
+                            class="channel-logo rounded-circle">
+                        <p class="title-text"> Pet Care Song | CoComelon Nursery Rhymes & Kids Songs </p>
+                        <img :src="store.getImagePath('img/image (6).svg')" alt="Other icon" class="icon-menu">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
 import { store } from '../../store.js'
@@ -155,10 +180,46 @@ div.jumbo-info {
         align-items: center;
         justify-content: center;
         border-radius: 12%;
+        cursor: pointer;
 
         img {
             width: 60%;
         }
     }
+
+}
+
+img.play-button {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.channel-logo {
+    width: 40px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+p.title-text {
+    color: $primary-light-color;
+    position: absolute;
+    top: 42px;
+    left: 85px;
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 355px;
+    white-space: nowrap;
+}
+
+img.icon-menu {
+    position: absolute;
+    top: 37px;
+    width: 40px;
+    right: 20px;
 }
 </style>
