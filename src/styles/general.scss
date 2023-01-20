@@ -9,13 +9,13 @@ body {
 
 h2 {
     margin: 1.5rem 0;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 span.minititle {
     color: $secondary-brand-color;
     font-weight: 500;
-    font-size: .7rem;
+    font-size: 1rem;
     padding-left: .5rem;
 }
 
@@ -23,9 +23,6 @@ p {
     color: $dark-text-color;
 }
 
-a {
-    text-decoration: none;
-}
 
 //font-awesome icon
 svg {
@@ -41,12 +38,4 @@ article {
 .star {
     color: $icon-color;
     font-size: .65rem;
-}
-
-ul {
-    margin-bottom: 0;
-
-    li {
-        list-style: none;
-    }
 }
