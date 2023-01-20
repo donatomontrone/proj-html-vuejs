@@ -1,25 +1,29 @@
 <template>
-    <section id="review-rating" class="pb-5">
-        <div class="wrapper">
-            <div class="d-flex justify-content-center">
-                <article class="main-article">
-                    <!-- Mini title con icona  -->
-                    <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
-                    <!-- Mini title della section -Colore preso dalla palette -->
-                    <span class="minititle">Review &amp; Rating</span>
-                    <h2>Over 8000 Customers With 5-Star Review</h2>
-                    <p>It is a long established fact that a reader will be distructed by the readble content of a page
-                        when looking at its layout.</p>
-                    <!-- fare un vfor per le stelle -->
-                    <font-awesome-icon icon="fa-solid fa-star" v-for="n in 5" class="star" />
-                </article>
-                <article>
-                    <ReviewRatingCard v-for="review in reviews" :reviewInfo="review" />
-                </article>
-            </div>
-            <div class="slider-buttons text-end">
-                <a href="#!"> <img :src="store.getImagePath('img/left-arrow.png')" alt="left arrow"> </a>
-                <a href="#!"><img :src="store.getImagePath('img/next.png')" alt="right arrow"></a>
+    <section id="review-rating" class="mb-5 pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-4">
+                            <article class="main-article">
+                                <!-- Mini title con icona  -->
+                                <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
+                                <!-- Mini title della section -Colore preso dalla palette -->
+                                <span class="minititle">Review &amp; Rating</span>
+                                <h2>Over 8000 Customers With 5-Star Review</h2>
+                                <p>It is a long established fact that a reader will be distructed by the readble content
+                                    of a page when looking at its layout.</p>
+                                <!-- fare un vfor per le stelle -->
+                                <font-awesome-icon icon="fa-solid fa-star" v-for="n in 5" class="star" />
+                            </article>
+                        </div>
+                        <ReviewRatingCard v-for="review in reviews" :reviewInfo="review" />
+                    </div>
+                    <div class="slider-buttons text-end">
+                        <a href="#!"> <img :src="store.getImagePath('img/left-arrow.png')" alt="left arrow"> </a>
+                        <a href="#!"><img :src="store.getImagePath('img/next.png')" alt="right arrow"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -63,27 +67,12 @@ export default {
 @use '../../../styles/partials/variables.scss' as *;
 
 section#review-rating {
-    padding: 4rem 0;
-    margin-bottom: 6rem;
+    h2 {
+        font-size: 2rem;
+    }
 
     img.paw-icon {
         width: 16px;
-    }
-
-    article {
-        width: calc((100% / 3) - 1rem);
-        flex-wrap: nowrap;
-    }
-
-    article.main-article {
-
-        h2 {
-            font-size: 1.5rem
-        }
-
-        p {
-            font-size: .75rem;
-        }
     }
 
     div.slider-buttons a {
@@ -97,7 +86,7 @@ section#review-rating {
         }
 
         img {
-            width: 20px;
+            width: 30px;
             margin: .3rem;
         }
     }

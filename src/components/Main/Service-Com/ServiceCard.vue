@@ -1,12 +1,14 @@
 <!--effettuare un v-for al parent -->
 <template>
-    <div class="card-container p-4">
-        <div class="card-info d-flex flex-column justify-content-center align-items-center">
-            <img class="path" :src="store.getImagePath('img/' + serviceCardInfo.path)" :alt="serviceCardInfo.title">
-            <h6 class="text-center">{{ serviceCardInfo.title }}</h6>
-            <p class="text-center">{{ serviceCardInfo.text }}</p>
-            <div class="icon d-flex justify-content-center">
-                <img :src="store.getImagePath('img/' + serviceCardInfo.icon)" alt="button">
+    <div class="col-12 col-sm-6 col-md">
+        <div class="card-container p-3">
+            <div class="card-info d-flex flex-column justify-content-center align-items-center">
+                <img class="path" :src="store.getImagePath('img/' + serviceCardInfo.path)" :alt="serviceCardInfo.title">
+                <h6 class="text-center">{{ serviceCardInfo.title }}</h6>
+                <p class="text-center">{{ serviceCardInfo.text }}</p>
+                <div class="icon d-flex justify-content-center">
+                    <img :src="store.getImagePath('img/' + serviceCardInfo.icon)" alt="button">
+                </div>
             </div>
         </div>
     </div>
@@ -29,14 +31,14 @@ export default {
 @use '../../../styles/partials/variables.scss' as *;
 
 div.card-container {
-    width: 20%;
+    // width: 20%;
+    // height: 320px;
 }
 
 div.card-info {
     background-color: $main-brand-color;
     border-radius: 100px;
     color: $secondary-light-color;
-
     padding: 1rem;
 
     &:hover {

@@ -1,5 +1,5 @@
 <template>
-    <section id="choose-us">
+    <section id="choose-us" class="mb-5 pb-5">
         <div class="container-fluid g-0">
             <div class="row">
                 <div class="col-12 col-sm-6">

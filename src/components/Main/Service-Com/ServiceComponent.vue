@@ -9,8 +9,12 @@
                     <h3 class="text-center">DogMilo Pet Care Services <br>For Your Best Friends.</h3>
                     <!-- Effettuare un vfor per ogni card -->
                     <div class="container g-5">
-                        <div class="row">
-                            <ServiceCard v-for="serviceCard in services" :serviceCardInfo="serviceCard" />
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="row">
+                                    <ServiceCard v-for="serviceCard in services" :serviceCardInfo="serviceCard" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
