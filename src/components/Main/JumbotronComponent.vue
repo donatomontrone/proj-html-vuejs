@@ -21,12 +21,19 @@
             <img :src="store.getImagePath('img/' + slides[currentActive].path)" :alt="slides[currentActive].title"
                 class="jumbo-img">
             <div class="jumbo-info">
-                <h1>{{ slides[currentActive].title }}</h1>
-                <p>{{ slides[currentActive].text }}</p>
-                <div class="btn-container d-flex">
-                    <ButtonComponent :headerButton="store.buttons[1]" />
-                    <div class="play-bg">
-                        <img :src="store.getImagePath('img/' + slides[currentActive].buttonPath)" alt="Play Icon">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>{{ slides[currentActive].title }}</h1>
+                            <p>{{ slides[currentActive].text }}</p>
+                            <div class="btn-container d-flex">
+                                <ButtonComponent :headerButton="store.buttons[1]" />
+                                <div class="play-bg">
+                                    <img :src="store.getImagePath('img/' + slides[currentActive].buttonPath)"
+                                        alt="Play Icon">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,9 +99,10 @@ export default {
 @use '../../styles/partials/variables.scss' as *;
 
 #jumbotron {
-    height: 430px;
     color: $primary-light-color;
     position: relative;
+    height: 575px;
+
 
 
     img.jumbo-img {
@@ -107,8 +115,7 @@ export default {
         width: 30px;
         position: absolute;
         top: 310px;
-        filter: invert(60%) sepia(15%) saturate(1704%) hue-rotate(198deg) brightness(109%) contrast(105%);
-        opacity: .5;
+        filter: invert(70%) sepia(100%) saturate(1704%) hue-rotate(198deg) brightness(109%) contrast(105%);
 
         &.next {
             right: 4px;
@@ -119,32 +126,29 @@ export default {
             left: 4px;
         }
 
-        &:hover {
-            opacity: 1;
-        }
     }
 }
 
 div.jumbo-info {
-    width: 23%;
-    font-size: .95rem;
+    width: 32%;
     position: absolute;
-    top: 110px;
-    left: 290px;
+    top: 20%;
+    left: 10%;
 
     h1 {
-        font-size: 2.2rem;
-        margin-right: 2rem;
-        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 600;
     }
 
     p {
         color: $primary-light-color;
+        font-size: 1.25rem;
+        padding: 1rem 0;
     }
 
     div.play-bg {
-        height: 45px;
-        width: 45px;
+        height: 60px;
+        width: 60px;
         margin-left: .5rem;
         background-color: #70D0FA;
         display: flex;
@@ -153,8 +157,7 @@ div.jumbo-info {
         border-radius: 12%;
 
         img {
-            width: 80%;
-
+            width: 60%;
         }
     }
 }
