@@ -1,11 +1,11 @@
 <template>
-    <section id="newsletter">
-        <div class="overlay-wrapper">
-            <div class="overlay d-flex">
-                <div class="left">
+    <section id="newsletter" class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-none d-md-block">
                     <img :src="store.getImagePath('img/news.png')" alt="imamgine cani">
                 </div>
-                <div class="right">
+                <div class=" col-12 col-lg-6  ">
                     <h4>Subscribe to Our Newsletter</h4>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Your Email Here" aria-label="email"
@@ -31,24 +31,25 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 
-.overlay-wrapper {
-    position: relative;
-}
-
 .overlay {
+    width: 65%;
     position: absolute;
-    padding: 1em;
+    padding: 3rem;
     background-color: $main-brand-color;
     border-radius: 10px;
     color: white;
-    margin: 0 5em 0 0;
     transform: translate(-50%, -50%);
     left: 50%;
-    width: 48%;
 }
 
-input::placeholder {
-    font-size: .6rem;
+input {
+    height: 55px;
+
+
+    &::placeholder {
+        font-size: 1.1rem;
+    }
+
 }
 
 span.input-button {
@@ -56,20 +57,15 @@ span.input-button {
     color: $primary-light-color
 }
 
-div.left,
-div.right {
-    width: 50%;
-}
-
-div.left img {
+img {
     position: absolute;
-    height: 220px;
+    height: 300px;
     bottom: 0;
     left: 5%;
 }
 
-div.right h4 {
-    margin: 2rem 0 1rem 0;
-    font-size: 1.2rem;
+h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
 }
 </style>

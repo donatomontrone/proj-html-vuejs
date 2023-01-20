@@ -1,10 +1,10 @@
 <template>
-    <section id="review-rating" class="mb-5 pb-5">
+    <section id="review-rating">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <article class="main-article">
                                 <!-- Mini title con icona  -->
                                 <img :src="store.getImagePath('img/dog-icon.png')" alt="Dog paw icon" class="paw-icon">
@@ -67,6 +67,9 @@ export default {
 @use '../../../styles/partials/variables.scss' as *;
 
 section#review-rating {
+
+    margin-bottom: 200px;
+
     h2 {
         font-size: 2rem;
     }

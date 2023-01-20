@@ -1,6 +1,6 @@
 <template>
     <!-- effettuare un v-for nel parent -->
-    <div class="col-4">
+    <div class="col-6 col-md-4">
         <div class="review-card">
             <!-- Effettuare un v for sul voto che inserisco nell'array dei data -->
             <font-awesome-icon icon="fa-solid fa-star" v-for="n in reviewInfo.vote" class="star mb-3" />

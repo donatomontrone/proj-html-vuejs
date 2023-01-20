@@ -1,6 +1,6 @@
 <!--effettuare un v-for al parent -->
 <template>
-    <div class="col-12 col-sm-6 col-md">
+    <div class="col-12 col-md-6 col-lg">
         <div class="card-container p-3">
             <div class="card-info d-flex flex-column justify-content-center align-items-center">
                 <img class="path" :src="store.getImagePath('img/' + serviceCardInfo.path)" :alt="serviceCardInfo.title">
